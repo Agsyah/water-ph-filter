@@ -81,8 +81,8 @@ void loop()
     if(!refilling) {
       refilling = true;
       
-      digitalWrite(WATER_PUMP_IN, LOW);
-      digitalWrite(WATER_PUMP_OUT, HIGH);   
+      digitalWrite(WATER_PUMP_IN, HIGH);
+      digitalWrite(WATER_PUMP_OUT, LOW);   
       Serial.println("[debug]: Water doesn't clean, turn on out pump!");   
     }
   }
@@ -93,10 +93,10 @@ void loop()
       Serial.println("[debug]: Filling water ...");
   }
 
-  if(refilling && digitalRead(WATER_PUMP_IN) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {
+  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {
       refilling = false;
       
-      digitalWrite(WATER_PUMP_IN, LOW);
+      digitalWrite(WATER_PUMP_IN, HI);
       Serial.println("[debug]: Full!");
   }
 }
