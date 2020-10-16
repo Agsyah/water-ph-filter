@@ -51,7 +51,7 @@ void loop()
 
   for(int i = 0; i < 10; i++) { 
     buffer_data[i] = analogRead(WATER_PH_SENSOR);
-    delay(10);
+    delay(80);
   }
   
   for(int i = 0; i < 9; i++) {
@@ -63,7 +63,7 @@ void loop()
   }
   avgValue = 0;
 
-  for(int i = 2; i < 8; i++) {
+  for(int i = 3; i < 9; i++) {
     avgValue += buffer_data[i];
   }
 
@@ -74,7 +74,7 @@ void loop()
     String dataOut = "PH: " + String(ph_value) + " || " + "S-Min: " + digitalRead(WATER_LEVEL_MIN) + " || " + "S-Max: " + digitalRead(WATER_LEVEL_MAX) + " || " + "Refill: " + refilling;
     Serial.println(dataOut);
 
-    run_time = millis() + 500;
+    run_time = millis() + 1000;
   }
  
   if(ph_value < 2 || ph_value > 8) {
