@@ -23,7 +23,7 @@ const int  WATER_PH_SENSOR = A0;
 unsigned long int run_time = 0;
 unsigned long int avgValue;
 
-bool refilling = false;
+bool refilling = true; //false
 int buffer_data[10], temp;
 
 void setup() {
@@ -51,7 +51,7 @@ void loop()
 
   for(int i = 0; i < 10; i++) { 
     buffer_data[i] = analogRead(WATER_PH_SENSOR);
-    delay(80);
+    delay(80); //delay 80ms, bagusnya 100 sih
   }
   
   for(int i = 0; i < 9; i++) {
