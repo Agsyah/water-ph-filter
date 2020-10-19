@@ -77,7 +77,7 @@ void loop()
     run_time = millis() + 1000;
   }
  
-  if(ph_value < 2 || ph_value > 8) {
+  if(ph_value < 2 || ph_value > 8) {// kondisi air buruk wajib kuras ulang
     if(!refilling) {
       refilling = true;
       
@@ -87,13 +87,13 @@ void loop()
     }
   }
 
-  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {
+  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {// kondisi sedang isi ulang air
       digitalWrite(WATER_PUMP_IN, HIGH);
       digitalWrite(WATER_PUMP_OUT, LOW);
       Serial.println("[debug]: Filling water ...");
   }
 
-  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {
+  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {//kondisi air penuh
       refilling = false;
       
       digitalWrite(WATER_PUMP_IN, HI);
