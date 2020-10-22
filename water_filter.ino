@@ -97,6 +97,6 @@ void loop()
       refilling = false;
       
       digitalWrite(WATER_PUMP_IN, HI);
-      Serial.println("[debug]: Full!");
+      Serial.println("[debug]: Full!!");
   }
 }
