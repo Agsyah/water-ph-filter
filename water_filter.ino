@@ -2,7 +2,7 @@
 * Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
-Water Level Minimum     -   pin 2
+* Water Level Minimum     -   pin 2
 * Water Level Maksimum    -   pin 3
 * Pompa Masukan           -   pin 4
 * Pompa Pembuangan        -   pin 5
@@ -98,5 +98,8 @@ void loop()
       
       digitalWrite(WATER_PUMP_IN, HI);
       Serial.println("[debug]: Full!!");
+  }
+  
+  if(datamasuk) {
   }
 }
