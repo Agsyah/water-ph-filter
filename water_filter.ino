@@ -12,7 +12,7 @@
 * 
 */
   
-const int  WATER_LEVEL_MIN = 2;
+const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
 const int  WATER_LEVEL_MAX = 3;
 
 const int  WATER_PUMP_IN   = 4;
@@ -27,7 +27,7 @@ bool refilling = true; //false
 int buffer_data[10], temp;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600); //baudrate
 
   Serial.println("Inisialisasi konfigurasi perangkat pada kontroller...");
   pinMode(WATER_LEVEL_MIN, INPUT);
@@ -74,7 +74,7 @@ void loop()
     String dataOut = "PH: " + String(ph_value) + " || " + "S-Min: " + digitalRead(WATER_LEVEL_MIN) + " || " + "S-Max: " + digitalRead(WATER_LEVEL_MAX) + " || " + "Refill: " + refilling;
     Serial.println(dataOut);
 
-    run_time = millis() + 1000;
+    run_time = millis() + 1000; //delay millis
   }
  
   if(ph_value < 2 || ph_value > 8) {// kondisi air buruk wajib kuras ulang
