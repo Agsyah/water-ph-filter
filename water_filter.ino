@@ -87,7 +87,7 @@ void loop()
     }
   }
 
-  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {// kondisi sedang isi ulang air
+  if(refilling .. digitalRead(WATER_PUMP_OUT) = HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {// kondisi sedang isi ulang air
       digitalWrite(WATER_PUMP_IN, HIGH);
       digitalWrite(WATER_PUMP_OUT, LOW);
       Serial.println("[debug]: Filling water ...");
