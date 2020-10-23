@@ -12,8 +12,8 @@
 * 
 
   
-const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
-const int  WATER_LEVEL_MAX = 3;
+#const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
+#const int  WATER_LEVEL_MAX = 3;
 
 const int  WATER_PUMP_IN   = 4;
 const int  WATER_PUMP_OUT  = 5;
