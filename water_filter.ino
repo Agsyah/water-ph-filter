@@ -2,8 +2,8 @@
 * Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
-* Water Level Minimum     -   pin 2
-* Water Level Maksimum    -   pin 3
+* Water Level Minimum     -   pin 3
+* Water Level Maksimum    -   pin 8
 * Pompa Masukan           -   pin 4
 * Pompa Pembuangan        -   pin 5
 * 
