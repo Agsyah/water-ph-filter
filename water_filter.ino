@@ -32,6 +32,9 @@ void setup() {
   Serial.println("Inisialisasi konfigurasi perangkat pada kontroller...");
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
+  
+  pinMode(WATER_IN, OUTPUT);
+  pinMode(WATER_OUT, OUTPUT);
 
   pinMode(WATER_PUMP_IN, OUTPUT);
   pinMode(WATER_PUMP_OUT, OUTPUT);
