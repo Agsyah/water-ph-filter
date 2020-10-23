@@ -33,8 +33,8 @@ void setup() {
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
 
-  pinMode(WATER_PUMP_IN, OUTPUT);
-  pinMode(WATER_PUMP_OUT, OUTPUT);
+  pinMode(WATER_PUMP_IN, INPUT);
+  pinMode(WATER_PUMP_OUT, INPUT);
 
   pinMode(WATER_PH_SENSOR, INPUT);
 
