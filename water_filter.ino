@@ -32,8 +32,8 @@ void setup() {
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
 
-  pinMode(WATER_PUMP_IN, INPUT);
-  pinMode(WATER_PUMP_OUT, INPUT);
+  pinMode(WATER_PUMP_IN, OUTPUT);
+  pinMode(WATER_PUMP_OUT, OUTPUT);
 
   pinMode(WATER_PH_SENSOR, INPUT);
 
@@ -93,13 +93,12 @@ void loop()
   }
 
   if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {//kondisi air penuh
-      refilling = false;
+      refilling = true;
       
-      digitalWrite(WATER_PUMP_IN, HI);
+      digitalWrite(WATER_PUMP_IN, LO);
       Serial.println("[debug]: Full!!");
   }
   
-  if(datamasuk) {
+  #if(datamasuk) {
   }
 }
-
