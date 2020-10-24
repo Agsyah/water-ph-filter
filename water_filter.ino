@@ -1,8 +1,8 @@
-#Konfigurasi pin pada perangkat ke arduino
+* Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
-* Water Level Minimum     -   pin 2
-* Water Level Maksimum    -   pin 3
+* Water Level Minimum     -   pin 3
+* Water Level Maksimum    -   pin 8
 * Pompa Masukan           -   pin 4
 * Pompa Pembuangan        -   pin 5
 * 
@@ -17,7 +17,7 @@ const int  WATER_LEVEL_MAX = 3;
 const int  WATER_PUMP_IN   = 4;
 const int  WATER_PUMP_OUT  = 5;
 
-#const int  WATER_PH_SENSOR = A9;
+const int  WATER_PH_SENSOR = A9;
 
 unsigned long int run_time = 0;
 unsigned long int avgValue;
