@@ -13,9 +13,9 @@
 
   
 const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
-const int  WATER_LEVEL_MAX = 3;
+const int  WATER_LEVEL_MAX = 3; //intejer water level tinggi
 
-const int  WATER_PUMP_IN   = 4;
+const int  WATER_PUMP_IN   = 4; //intejer pompa masukan
 const int  WATER_PUMP_OUT  = 5;
 
 const int  WATER_PH_SENSOR = A9;
@@ -32,6 +32,9 @@ void setup() {
   Serial.println("Inisialisasi konfigurasi perangkat pada kontroller...");
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
+  
+  pinMode(WATER_IN, OUTPUT);
+  pinMode(WATER_OUT, OUTPUT);
 
   pinMode(WATER_PUMP_IN, OUTPUT);
   pinMode(WATER_PUMP_OUT, OUTPUT);
