@@ -1,4 +1,4 @@
-* Konfigurasi pin pada perangkat ke arduino
+#Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
 * Water Level Minimum     -   pin 2
@@ -17,7 +17,7 @@ const int  WATER_LEVEL_MAX = 3;
 const int  WATER_PUMP_IN   = 4;
 const int  WATER_PUMP_OUT  = 5;
 
-const int  WATER_PH_SENSOR = A9;
+#const int  WATER_PH_SENSOR = A9;
 
 unsigned long int run_time = 0;
 unsigned long int avgValue;
@@ -93,12 +93,12 @@ void loop()
   }
 
   if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MAX) == HIGH) {//kondisi air penuh
-      refilling = true;
+      refilling = false;
       
-      digitalWrite(WATER_PUMP_IN, LO);
+      digitalWrite(WATER_PUMP_IN, HI);
       Serial.println("[debug]: Full!!");
   }
   
-  #if(datamasuk) {
+  if(datamasuk) {
   }
 }
