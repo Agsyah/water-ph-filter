@@ -1,4 +1,3 @@
-
 * Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
@@ -103,3 +102,4 @@ void loop()
   if(datamasuk) {
   }
 }
+
