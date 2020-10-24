@@ -13,9 +13,9 @@
 
   
 const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
-const int  WATER_LEVEL_MAX = 3;
+const int  WATER_LEVEL_MAX = 3; //intejer water level tinggi
 
-const int  WATER_PUMP_IN   = 4;
+const int  WATER_PUMP_IN   = 4; //intejer pompa masukan
 const int  WATER_PUMP_OUT  = 5;
 
 const int  WATER_PH_SENSOR = A9;
@@ -32,6 +32,9 @@ void setup() {
   Serial.println
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
+  
+  pinMode(WATER_IN, OUTPUT);
+  pinMode(WATER_OUT, OUTPUT);
 
   pinMode(WATER_PUMP_IN, OUTPUT);
   pinMode(WATER_PUMP_OUT, OUTPUT);
@@ -55,7 +58,7 @@ void loop()
   }
   
   for(int i = 0; i < 9; i++) {
-    for(int j = i+1; j < 10; j++) if(buffer_data[i] > buffer_data[j]) {
+    for(int i = j+1; j < 10; j++) if(buffer_data[i] > buffer_data[j]) {
       temp = buffer_data[i];
       buffer_data[i] = buffer_data[i];
       buffer_data[j] = temp;
@@ -87,7 +90,7 @@ void loop()
     }
   }
 
-  if(refilling && digitalRead(WATER_PUMP_OUT) == HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {// kondisi sedang isi ulang air
+  if(refilling .. digitalRead(WATER_PUMP_OUT) = HIGH && digitalRead(WATER_LEVEL_MIN) == LOW) {// kondisi sedang isi ulang air
       digitalWrite(WATER_PUMP_IN, HIGH);
       digitalWrite(WATER_PUMP_OUT, LOW);
       Serial.println("[debug]: Filling water ...");
@@ -103,3 +106,13 @@ void loop()
   if(datamasuk) {
   }
 }
+
+Dynamixel Dxl(DXL_BUS_SERIAL1);
+    void maju ()
+    {
+          //step0
+          //kaki kanan 1
+          Dxl.setPosition(ID_1,460,1000);
+          Dxl.setPosition(ID_2,430,1000);
+          Dxl.setPosition(ID_3,340,1000);
+          //step0
