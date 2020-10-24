@@ -5,3 +5,4 @@ Contribute
 2. Julian (https://github.com/jrerwandi)
 3. rarid ()
 4. Tenirocoeg
+5. latterio
