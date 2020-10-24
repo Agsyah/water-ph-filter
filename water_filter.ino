@@ -58,10 +58,10 @@ void loop()
   }
   
   for(int i = 0; i < 9; i++) {
-    for(int j = i+1; j < 10; j++) if(buffer_data[i] > buffer_data[j]) {
+    for(int i = j+1; j < 10; j++) if(buffer_data[i] > buffer_data[j]) {
       temp = buffer_data[i];
-      buffer_data[i] = buffer_data[j];
-      buffer_data[j] = temp;
+      buffer_data[j] = buffer_data[j];
+      buffer_data[i] = temp;
     }
   }
   avgValue = 0;
