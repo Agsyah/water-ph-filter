@@ -1,4 +1,3 @@
-
 #Konfigurasi pin pada perangkat ke arduino
 * 
 * Digital:
