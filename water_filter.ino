@@ -5,7 +5,7 @@
 * Water Level Minimum     -   pin 2
 * Water Level Maksimum    -   pin 3
 * Pompa Masukan           -   pin 4
-* Pompa Pembuangan        -   pin 5
+* Pompa Pembuangan        -   pin 
 * 
 * Analog:
 * Sensor PH -> P0         -   pin A0
@@ -29,7 +29,7 @@ int buffer_data[10], temp;
 void setup() {
   Serial.begin(9600); //baudrate
 
-  Serial.println("Inisialisasi konfigurasi perangkat pada kontroller...");
+  Serial.println
   pinMode(WATER_LEVEL_MIN, INPUT);
   pinMode(WATER_LEVEL_MAX, INPUT);
   
@@ -60,8 +60,8 @@ void loop()
   for(int i = 0; i < 9; i++) {
     for(int i = j+1; j < 10; j++) if(buffer_data[i] > buffer_data[j]) {
       temp = buffer_data[i];
-      buffer_data[j] = buffer_data[j];
-      buffer_data[i] = temp;
+      buffer_data[i] = buffer_data[i];
+      buffer_data[j] = temp;
     }
   }
   avgValue = 0;
