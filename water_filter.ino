@@ -12,7 +12,7 @@
 
   
 #const int  WATER_LEVEL_MIN = 2; //intejer water level rendah
-#const int  WATER_LEVEL_MAX = 3;
+#const int  WATER_LEVEL_MAX = 3; //intejer water level tinggi
 
 const int  WATER_PUMP_IN   = 4;
 const int  WATER_PUMP_OUT  = 5;
@@ -78,7 +78,7 @@ void loop()
  
   if(ph_value < 2 || ph_value > 8) {// kondisi air buruk wajib kuras ulang
     if(!refilling) {
-      refilling = true;
+      refilling = true; //kuras ulang berjalan
       
       digitalWrite(WATER_PUMP_IN, HIGH);
       digitalWrite(WATER_PUMP_OUT, LOW);   
